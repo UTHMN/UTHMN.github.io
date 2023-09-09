@@ -24,3 +24,7 @@
             color: #3498db;
             text-decoration: none;
         }
+
+        ul {
+                text-align: center;
+        }
