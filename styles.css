@@ -50,3 +50,9 @@ footer {
     margin-right: auto;
     background-color: #333;
 }
+
+.BlogFull {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
