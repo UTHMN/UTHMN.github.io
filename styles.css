@@ -67,3 +67,15 @@ main {
     margin-right: auto;
     background-color: #333;
 }
+
+.BlogEntryLink {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration-color: #333;
+}
+
+.BlogExitLink {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration-color: #333;
+}
