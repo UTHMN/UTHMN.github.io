@@ -16,7 +16,8 @@
 }
 
 p {
-    font-size: medium;
+    font-size: 20px;
+    font-weight: 750;
 }
 
 footer {
@@ -28,7 +29,7 @@ header {
 }
 
 .card {
-    max-width: 540px;
+    max-width: 750px;
     background: #fff;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
@@ -44,4 +45,12 @@ header {
 
 ul {
     list-style-type: none;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 5px;
+    background-color: #000000;
+    border-color: #000000;
 }
