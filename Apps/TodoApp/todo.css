@@ -80,7 +80,7 @@ ul li::before {
     background-image: url(unchecked.png);
     background-size: cover;
     background-position: center;
-    top: 8px;
+    top: 11px;
     left: 8px;
 }
 
