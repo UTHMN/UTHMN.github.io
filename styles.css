@@ -77,6 +77,8 @@ hr {
     color: #858585;
 }
 
+/* Toast box styling */
+
 .buttons {
     margin: 50px;
 }
@@ -114,7 +116,6 @@ hr {
     align-items: center;
     font-size: 25px;
     padding-left: 25px;
-    position: relative;
     transform: translateX(100%);
     animation: moveleft 0.5s linear forwards;
 }
@@ -152,3 +153,5 @@ hr {
     background: rgb(255, 82, 82);
     animation: anim 6s linear forwards;
 }
+
+/* Toastbox styling - end */
