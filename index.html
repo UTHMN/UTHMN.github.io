@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -13,39 +12,58 @@
             <div class="card">
                 <header>
                     <h1>A very Co0l website</h1>
+                    <p>(scroll down and click the titles)</p>
                     <br><hr>
-                    <!-- Links to other parts of website -->
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="blog.html" class="EntryLink">Blog</a>
-                            </li>
-                            <li>
-                                <a href="contacts.html" class="EntryLink">Contacts</a>
-                            </li>
-                            <li>
-                                <a href="todoApp/todo.html" class="EntryLink">Todo</a>
-                            </li>
-                            <li>
-                                <a href="clock/index.html" class="EntryLink">Clock</a>
-                            </li>
-                        </ul>
-                    </nav>
                 </header>
-                <hr><br>
-                <main>
-                    <!-- Main page TODO: add a box linking to my projects better -->
-                    <div class="buttons">
-                        <button onclick="showToast('Cool')">Cool Button</button>
-                    </div>
-                    <div id="toastBox"></div>
-                </main>
-                    <!-- Just a little copyright to go at bottom -->
-                <footer>
-                    &copy; 2023 Uthmn
-                </footer>
+                <div class="buttons">
+                    <button onclick="showToast('Cool')">Cool Button</button>
+                </div>
             </div>
+            <main>
+                <!-- Main page TODO: add a box linking to my projects better -->
+                <div class="card">
+                    <a href="blog.html" class="EntryLink">Blog <img src="images/enter.png" class="EntryIcon"></a>
+                    <hr>
+                    <p>This is blog, yes</p>
+                    <p>Newest post: I might move this domain</p>
+                </div>
+                <div class="card">
+                    <a href="contacts.html" class="EntryLink">Contacts <img src="images/enter.png" class="EntryIcon"></a>
+                    <hr>
+                    <p>My contacts including youtube, github and other stuff</p>
+                    <p>Yes, yes, very co0l</p>
+                </div>
+                <div class="card">
+                    <a href="todoApp/todo.html" class="EntryLink">Todo <img src="images/enter.png" class="EntryIcon"></a>
+                    <hr>
+                    <p>Todo app I made, saves on when you close the tab</p>
+                    <p>Co0l co0l co0l</p>
+                </div>
+                <div class="card">
+                    <a href="clock/index.html" class="EntryLink">Clock <img src="images/enter.png" class="EntryIcon"></a>
+                    <hr>
+                    <p>Clock, I don't know what else to say</p>
+                    <p>co0l thing</p>
+                </div>
+                <div class="card">
+                    <a href="qrGen/index.html" class="EntryLink">Qr gen <img src="images/enter.png"></a>
+                    <hr>
+                    <p>Make qr, yes</p>
+                    <p>Qr = Qr</p>
+                </div>
+                <div class="card">
+                    <a href="quizApp/quiz.html" class="EntryLink">Quiz <img src="images/enter.png"></a>
+                    <hr>
+                    <p>Budget kahoot</p>
+                    <p>Fried  popcorn kernels</p>
+                </div>
+            </main>
+            <!-- Just a little copyright to go at bottom -->
+            <footer>
+                &copy; 2023 Uthmn
+            </footer>
         </div>
+        <div id="toastBox"></div>
     </body>
     <script src="main.js"></script>
     <script src="toast.js"></script>

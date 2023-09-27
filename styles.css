@@ -25,6 +25,7 @@ p {
 
 footer {
   font-size: 25px;
+  color: white;
 }
 
 header {
@@ -51,11 +52,13 @@ ul {
 }
 
 hr {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   height: 5px;
   background-color: #000000;
   border-color: #000000;
+  margin-right: 250px;
+  margin-left: 250px;
 }
 
 .BlogLink {
@@ -77,6 +80,13 @@ hr {
   text-decoration: #333;
   text-align: center;
   color: #858585;
+}
+
+.EntryIcon {
+  margin-top: 2.5px;
+  margin-left: 10px;
+  width: 45px;
+  height: 45px;
 }
 
 /* Toast box styling */
