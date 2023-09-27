@@ -10,6 +10,10 @@ function showToast(msg){
       toast.classList.add('test');
    }
 
+   if(msg.includes('Cool')){ //Copy Paste this for each special style you want to make.
+    toast.classList.add('ButteredBread');
+ }
+
    setTimeout(()=>{
       toast.remove();
    },6000);
