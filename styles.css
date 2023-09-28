@@ -93,6 +93,7 @@ hr {
 
 .buttons {
   margin: 50px;
+  border-radius: 7px;
 }
 
 .buttons button {
@@ -104,6 +105,7 @@ hr {
   height: 40px;
   margin: 5px;
   cursor: pointer;
+  border-radius: 7px;
 }
 
 #toastBox {
