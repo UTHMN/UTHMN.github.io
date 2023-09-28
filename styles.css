@@ -50,10 +50,6 @@ ul {
   list-style-type: none;
 }
 
-.hr {
-  height: 100%;
-}
-
 hr {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -62,9 +58,6 @@ hr {
   border-color: #000000;
   margin-right: 250px;
   margin-left: 250px;
-  display: flex;
-  justify-content: center;
-  width: 50%;
 }
 
 .BlogLink {
