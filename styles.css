@@ -149,7 +149,7 @@ hr {
   padding-left: 25px;
   transform: translateX(100%);
   animation: moveleft 0.30s linear forwards;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 @keyframes moveleft {
