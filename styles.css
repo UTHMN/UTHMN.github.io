@@ -167,6 +167,7 @@ hr {
   height: 5px;
   background: rgb(77, 77, 77);
   animation: anim 6s linear forwards;
+  border-radius: 20px;
 }
 
 @keyframes anim {
@@ -184,6 +185,7 @@ hr {
   height: 5px;
   background: rgb(255, 82, 82);
   animation: anim 6s linear forwards;
+  border-radius: 20px;
 }
 
 /* Toastbox styling - end */
