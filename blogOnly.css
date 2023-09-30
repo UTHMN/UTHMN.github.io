@@ -9,3 +9,11 @@ body {
   height: 50px;
   width: 50px;
 }
+
+.BlogCard {
+  max-width: 750px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
