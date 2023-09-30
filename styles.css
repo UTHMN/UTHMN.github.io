@@ -149,7 +149,7 @@ hr {
   padding-left: 25px;
   transform: translateX(100%);
   animation: moveleft 0.30s linear forwards;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 @keyframes moveleft {
@@ -167,7 +167,7 @@ hr {
   height: 5px;
   background: rgb(77, 77, 77);
   animation: anim 6s linear forwards;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 @keyframes anim {
@@ -185,7 +185,7 @@ hr {
   height: 5px;
   background: rgb(255, 82, 82);
   animation: anim 6s linear forwards;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 /* Toastbox styling - end */
