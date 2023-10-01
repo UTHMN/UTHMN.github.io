@@ -1,7 +1,7 @@
 body {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #153677, #4e085f);
+    background: #333533;
     padding: 10px;
   }
 
@@ -12,8 +12,11 @@ body {
 
 .BlogCard {
   max-width: 750px;
-  background: #fff;
+  background: #ffee32;
   margin: 100px auto 20px;
   padding: 40px 30px 70px;
   border-radius: 10px;
+  border-width: 7px;
+  border-color: #ffd100;
+  border-style: solid;
 }
