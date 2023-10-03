@@ -12,6 +12,7 @@ function showToast(msg){
 
    if(msg.includes('Cool')){ //Copy Paste this for each special style you want to make.
     toast.classList.add('ButteredBread');
+    alert("Cool!");
  }
 
    setTimeout(()=>{
