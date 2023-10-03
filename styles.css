@@ -125,8 +125,7 @@ hr {
 }
 
 #toastBox {
-  position: absolute;
-  bottom: 30px;
+  bottom: 10px;
   right: 30px;
   display: flex;
   align-items: flex-end;
@@ -134,6 +133,7 @@ hr {
   overflow: hidden;
   padding: 30px;
   border-radius: 20px;
+  position: fixed;
 }
 
 .toast {
@@ -147,9 +147,11 @@ hr {
   align-items: center;
   font-size: 25px;
   padding-left: 25px;
-  transform: translateX(100%);
+  bottom: 10px;
+  right: 30px;
   animation: moveleft 0.30s linear forwards;
   border-radius: 10px;
+  position: fixed;
 }
 
 @keyframes moveleft {
@@ -168,6 +170,7 @@ hr {
   background: rgb(77, 77, 77);
   animation: anim 6s linear forwards;
   border-radius: 10px;
+  position: fixed;
 }
 
 @keyframes anim {
