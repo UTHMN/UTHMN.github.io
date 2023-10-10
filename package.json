@@ -1,3 +1,6 @@
 {
-    "homepage" : "https://uthmn.github.io/index"
+    "homepage": "https://uthmn.github.io/index",
+    "dependencies": {
+        "@sentry/browser": "^7.73.0"
+    }
 }
