@@ -6,8 +6,8 @@ if not os.path.exists("./posts"):
     print("posts support spaces in the title and html formatting")
     print("no posts exist, exiting")
     exit()
-if not os.path.exists("./export/posts"):
-    os.makedirs("./export/posts")
+if not os.path.exists("./docs/posts"):
+    os.makedirs("./docs/posts")
 
 def generate_index(title, posts, email):
     index = f"""
@@ -113,7 +113,7 @@ def generate_index(title, posts, email):
 </html>
     """
     
-    with open("./export/index.html", "w", encoding="utf-8") as file:
+    with open("./docs/index.html", "w", encoding="utf-8") as file:
         file.write(index)
     
 def generate_posts_sec():
@@ -153,7 +153,7 @@ def generate_post_pages():
     
     for i in range(len(post_titles)):
         title = post_titles[i]
-        export = f"export/posts/{title}.html"
+        export = f"docs/posts/{title}.html"
         content = ""
         
         with open(f"./posts/{title}", "r") as file:
