@@ -1,0 +1,117 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+                    rel="stylesheet"
+                />
+                <title>05-04-2024-Working with rickrolls.html</title>
+            </head>
+            <body>
+                <h1>
+    Making a rickroll website
+</h1>
+
+<p>
+When I was making my rickroll website (<a href="rick.uthmn.com">rick.uthmn.com</a>) I first got my actual rickroll video
+<a href="https://ia601509.us.archive.org/10/items/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4">here</a>
+
+After that, I added a &lt;video&gt; tags to the code and then inside I added 2 &lt;source&gt; tags inside,
+the first to make it load faster,
+by loading the video from the websites files and the 2nd was loading from a url which is slower
+but means you only need index.html when downloading the site.
+
+You can do the same for the audio just using &lt;audio&gt; tags instead.
+
+I also added a favicon to the website using a &lt;link&gt; tag inside the &lt;head&gt; tag
+and a &lt;title&gt; tag to polish things off.
+
+You might think im done here but from there a problem emerges!
+Autoplay blocks audio from the rickroll!
+
+"The problem here is rickrolls are supposed to catch you by surprise and
+with audio blocked it is basically telling you its a rickroll" - Sherlock Holmes
+
+To fix this problem, you need to add this code:
+<code>
+&lt;script&gt;
+    // Check if the audio is muted due to browser restrictions
+    var audio = document.getElementById("audioContainer");
+    var promise = audio.play();
+    
+    if (promise !== undefined) {
+        promise.then(_ => {
+            // Autoplay started!
+        }).catch(error => {
+            // Autoplay was prevented.
+            // You can try to play the audio again on user interaction.
+            document.addEventListener('click', function() {
+              audio.play();
+            });
+        });
+    }
+&lt;script&gt;
+</code>
+
+Now if I am being honest, I have no idea what this does but just add it.
+
+Full source code: <a href="https://github.com/UTHMN/rick">https://github.com/UTHMN/rick</a>
+
+If everything went right, you can see a preview here:
+</p>
+
+<!-- put this at the end -->
+<div class="browser-mockup">
+<video autoplay muted loop id="myVideo">
+    <source src="rick.mp4" type="video/mp4">
+    <source src="https://ia601509.us.archive.org/10/items/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
+    Your browser does not support .mp4 or the video tag.
+</video>
+</div>
+<style>
+    p { white-space: pre; }
+
+    .browser-mockup {
+        border-top: 2em solid rgba(230, 230, 230, 0.7);
+        box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.4);
+        position: relative;
+        display: inline-block;
+        border-radius: 2%;
+    }
+    .browser-mockup:before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: -1.25em;
+        left: 1em;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 50%;
+        background-color: #f44;
+        box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
+    }
+    .browser-mockup > * {
+        display: block;
+    }
+    video {
+        border-radius: 2%;
+    }
+</style>
+            </body>
+            <style>
+                * {
+                    font-family: "Manrope", sans-serif;
+                    color: #1b1b1b;
+                }
+                
+                body {
+                    background-color: #F8F8FF;
+                }
+            </style>
+        </html>
+        
