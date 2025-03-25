@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>essay.md</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+html,footer,header{
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Custom MD PDF CSS
+ */
+html,footer,header{
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+
+ }
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file:///r%3A/2.Travail/1.Enseignement/Cours/_1.Outils/2.Developpement/1.SCSS/main.css" type="text/css"><link rel="stylesheet" href="file:///d%3A/rdaros/Cours/_1.Outils/2.Developpement/1.SCSS/main.css" type="text/css">
+</head>
+
+<body>
+    <h1 id="how-india-was-affected-by-the-british-empire">How India was affected by the British Empire</h1>
+<h2 id="introduction">Introduction</h2>
+<p>During the British Empires Reign, India was a British colony. The British Empire was a global empire consisting of 56 countries that spanned between the late 16th century and the early 19th century<sup><a href="#ref1">1</a></sup>. While the British Empires reign over India resulted in advancements in infrastructure<sup><a href="#ref2">2</a></sup>, education<sup><a href="#ref3">3</a></sup>, and healthcare, it also resulted in the displacement of the native population through economic exploitation and political struggles.</p>
+<h2 id="indias-infrastructure-changes">India's infrastructure changes</h2>
+<p>India's infrastructure was greatly affected by the British Empire. One example of this is the railways created by the British Empire. During the British Rule, they constructed multiple railways with a motive of supporting their goals of the British empire in the colonies<sup><a href="#ref4">4</a></sup>. The railways were usually built to transport goods, and first began operation in 1853<sup><a href="#ref4">4</a></sup>. The first passenger train in India was built on the 16th April 1853<sup><a href="#ref5">5</a></sup> and ran between Bori Bunder (Bombay) and Thane (34 km)<sup><a href="#ref5">5</a></sup>. It was operated by three engines, named Sahib, Sultan and Sindh<sup><a href="#ref5">5</a></sup>, and had thirteen carriages<sup><a href="#ref5">5</a></sup>.</p>
+<p>In 1880, the Oriental Telephone Company and the Anglo-Indian Telephone Company asked the Goverment of India to create a telephone a telephone exchange in India. Permission was refused to prevent a government monopoly on telephone networking and the government itself should create the network. In 1881, the government later reverted its decision and a licence was granted to the Oriental Telephone Company to open telephone exchanges at: Kolkata, Mumbai, Chennai and Ahmedabad and the first telephone service was established in the country.<sup><a href="#ref6">6</a></sup></p>
+<h2 id="educational-changes-in-india">Educational changes in India</h2>
+<p>The British Empire had a significant impact on the educational system in India. Examples of this include the introduction of the British education system in India, the establishment of the first university in India, and the introduction of English as the medium of instruction in schools.<sup><a href="#ref7">7</a></sup></p>
+<p>Under the British Empire's reign, University was only accessible to upper classes. This is because of high fees, You have to speak English, and the and the universities were concentrated in urban areas. This resulted in the education system being dominated by the upper class and more Indians speaking English, which has also impacted India today.<sup><a href="#ref7">7</a></sup></p>
+<h2 id="economical-changes-in-indiasup8sup">Economical changes in India<sup><a href="#ref8">8</a></sup></h2>
+<p>Under the British Empire's reign, the economy of India was heavily influenced by the British Empire. These influences include:</p>
+<p><u> <strong>India's Change into a economic colony colony</strong> </u><br>
+The British used India's resources as a source of raw materials and a market for their goods. This harmed local industries and farmers, who were unable to compete with the British.</p>
+<p><u> <strong>Decline of the Textile Industry</strong> </u><br>
+British policies led to a decline in Indian textiles, as machine-made textiles by the British flooded the market for cheaper. Heavy tarrifs on Indian goods and free access for British goods led to de-industrialization in India.</p>
+<p><u> <strong>Exploitative Land Revenue Laws</strong> </u><br>
+Lots of laws about land revenue were made to extract as much money from Indian farmers as possible leading to distress and lack of food.</p>
+<p><u> <strong>Commercialization of Farming</strong> </u><br>
+The introduction of lots of cash crops in India such as tea, coffee, cotton, sugarcane and oilseed led to more food shortages</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In conclusion, the British Empire's rule over India resulted in a significant impact on the country's infrastructure, education, and economy. On one hand, the British introduced significant advancements such as railways, telecommunications and universities that contributed to industrialization and modernization. But on the other hand, these changes were primarily made to serve the interests of the British Empire, leading to economic exploitation, for example the food shortages caused by the commercialization of agriculture.</p>
+<p>The British Education System also further divided India's society, with the upper classes receiving better education and opportunities, while the lower classes were left behind. Economic policies also led to the decline of local industries leading to the decline of local industries like the textile industry and farming.</p>
+<p>While some aspects of British rule contributed to modernization, the overall impact was one of economic exploitation and social disruption. The legacy of British reign can still be seen today in India's infrastructure, legal system, and English-language dominance, but it also left behind deep economic and social scars that took decades to recover from.</p>
+<hr>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="ref1">1</a>: <a href="https://en.wikipedia.org/wiki/British_Empire#:~:text=It%20began%20with%20the%20overseas%20possessions%20and%20trading%20posts%20established%20by%20England%20in%20the%20late%2016th%20and%20early%2017th%20centuries%2C%20and%20colonisation%20attempts%20by%20Scotland%20during%20the%2017th%20century.%5B1%5D%20At%20its%20height%20in%20the%2019th%20and%20early%2020th%20centuries">Wikipedia - British Empire</a></p>
+<blockquote>
+<p>It began with the overseas possessions and trading posts established by England in the late 16th and early 17th centuries, and colonisation attempts by Scotland during the 17th century. At its height in the 19th and early 20th centuries</p>
+</blockquote>
+<p><a id="ref2">2</a>: <a href="https://compass.onlinelibrary.wiley.com/doi/10.1111/hic3.12614#:~:text=Beginning%20from%20the%201830s%2C%20the,rulers%20and%20later%20nationalist%20politicians.">Wiley Online Library - British Empire</a></p>
+<blockquote>
+<p>Beginning from the 1830s, the colonial state, across British India began constructing large scale public works projects, namely, the railways and canals. These<br>
+projects evoked interest among the British<br>
+parliament, military engineers, colonial administrators, local rulers and later nationalist politicians</p>
+</blockquote>
+<p><a id="ref3">3</a>: <a href="https://vajiramandravi.com/upsc-exam/british-education-system-in-india/">Vajiraman &amp; Ravi - British Education System In India</a></p>
+<blockquote>
+<p>Whole Article</p>
+</blockquote>
+<p><a id="ref4">4</a>: <a href="https://byjus.com/commerce/infrastructure-in-india-during-british-rule/#:~:text=%E2%97%8F%20During%20British,the%20Indian%20economy.">BYJU'S - Infrastructure in India during British rule</a></p>
+<blockquote>
+<p>● During British rule, there was some infrastructural development in areas such as railways, ports, water transport, posts, and telegraphs.<br>
+● However, the motive behind this development was simply to foster the colonial interest of the British government.<br>
+● They were never interested in the growth of the Indian economy.</p>
+</blockquote>
+<p><a id="ref5">5</a>: <a href="https://artsandculture.google.com/story/a-history-of-indian-railways-national-rail-museum/cAVh7RwiKiTtKg?hl=en">Google Arts &amp; Culture - A History of Indian Railways</a></p>
+<blockquote>
+<p>On 16th April 1853, the first passenger train ran between Bori Bunder (Bombay) and Thane, a distance of 34 km.<br>
+It was operated by three locomotives, named Sahib, Sultan and Sindh, and had thirteen carriages.</p>
+</blockquote>
+<p><a id="ref6">6</a>: <a href="https://en.wikipedia.org/wiki/Telecommunications_in_India#:~:text=In%201880%2C%20two,Bombay%20and%20Madras.">Wikipedia - Telecommunications in India</a></p>
+<blockquote>
+<p>In 1880, two telephone companies, namely the Oriental Telephone Company Ltd. and the Anglo-Indian Telephone<br>
+Company Ltd. approached the Government of India to establish a telephone exchange in India. Permission was<br>
+refused on the grounds that the establishment of telephone networking was a government monopoly and that the<br>
+government itself should undertake the work. In 1881, the government later reversed its earlier decision and a<br>
+licence was granted to the Oriental Telephone Company Limited of England for opening telephone exchanges at<br>
+Kolkata, Mumbai, Chennai and Ahmedabad and the first formal telephone service was established in the country.[16]<br>
+On 28 January 1882, Major E. Baring, Member of the Governor General of India's Council declared open the<br>
+Telephone Exchanges in Calcutta, Bombay and Madras.</p>
+</blockquote>
+<p><a id="ref7">7</a>: <a href="https://teachers.institute/contemporary-india-education/indian-education-transformation-british-imperialism/">Teachers.Institute - The Transformation of Indian Education Under British Imperialism</a></p>
+<blockquote>
+<p>University education under colonial rule remained primarily accessible to urban elites and upper castes. High fees, English-language requirements, and the urban<br>
+concentration of institutions created significant barriers for most Indians. The system effectively produced what some scholars have termed a “comprador<br>
+intelligentsia”—Western-educated Indians who could serve as intermediaries between colonial authorities and the broader population.</p>
+</blockquote>
+<p><a id="ref8">8</a>: <a href="https://www.nios.ac.in/media/documents/SecSocSciCour/English/Lesson-05.pdf">National Institute Of Open Schooling - IMPACT OF BRITISH RULE ON INDIA: ECONOMIC, SOCIAL AND CULTURAL (1757-1857)</a></p>
+<blockquote>
+<p>Whole Article</p>
+</blockquote>
+
+</body>
+
+</html>
