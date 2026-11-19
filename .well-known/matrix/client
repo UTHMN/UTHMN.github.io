@@ -1,1 +1,11 @@
-{"m.homeserver":{"base_url":"https://matrix.uthmn.com/"}}
+{
+  "m.homeserver": {
+    "base_url": "https://matrix.uthmn.com/"
+  },
+  "org.matrix.msc4143.rtc_foci": [
+    {
+      "type": "livekit",
+      "livekit_service_url": "https://livekit.uthmn.com"
+    }
+  ]
+}
